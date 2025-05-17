@@ -1,0 +1,33 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Optional: coverage reports (if in future you add testing)
+coverage/
+
+# Optional: multer uploaded temp files (if you save any locally)
+uploads/
+
+# Optional: IDE specific
+.vscode/
+.idea/
+
+# Optional: Render build cache (if any)
+render-build/
+
+# Optional: Backup files
+*.bak
+*.tmp
