@@ -1,19 +1,24 @@
-import express from 'express';
-import dotenv from 'dotenv';
-import cors from 'cors';
-import connectDB from './config/db.js';
-import orderRoutes from './routes/orderRoutes.js';
+import express from "express";
+import dotenv from "dotenv";
+import cors from "cors";
+import connectDB from "./config/db.js";
+import orderRoutes from "./routes/orderRoutes.js";
 
 dotenv.config();
 connectDB();
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://shreesailogistics.onrender.com",
+    credentials: true,
+  })
+);
 app.use(express.json());
 
-app.use('/api/orders', orderRoutes);
+app.use("/api/orders", orderRoutes);
 
-app.get('/', (req, res) => {
+app.get("/", (req, res) => {
   res.send("Logistics Backend Running 🚀");
 });
 
